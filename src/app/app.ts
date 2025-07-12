@@ -32,12 +32,12 @@ export class App {
     }
   }
 
-  markAsDone(){
-
+  markAsDone(todo: Todo){
+    todo.done = true;
   }
 
-  markAsUndone(){
-
+  markAsUndone(todo: Todo){
+    todo.done = false;
   }
 
   protected readonly title = signal('project-todo');
