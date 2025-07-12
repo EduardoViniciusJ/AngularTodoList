@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Todo } from '../models/todo.models';
 
 
 @Component({
@@ -11,15 +12,13 @@ import { CommonModule } from '@angular/common';
 })
 export class App {
 
-  public todos: any[] = [];
+  public todos: Todo[] = [];
   public titleMain: String = 'Tarefas:';
 
   constructor(){
-    this.todos.push('trabalhar');
-    this.todos.push('estudar');
-    this.todos.push('caminhar');
-    this.todos.push('treinar');
-    this.todos.push('ler');
+    this.todos.push(new Todo(1, 'Caminhar', false));
+    this.todos.push(new Todo(2, 'Estudar', false));
+    this.todos.push(new Todo(3, 'Treinar', true));
   }
 
   alterarTexto(){
