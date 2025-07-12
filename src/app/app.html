@@ -6,3 +6,15 @@
     <button *ngIf="todo.done" (click)="markAsUndone(todo)">REFAZER</button> 
     <button (click)="remove(todo)">REMOVER</button> </li> 
 </ul>
+
+<form [formGroup]="form">
+  <fieldset>
+    <label>Tarefa</label>
+    <input 
+      type="text" 
+      placeholder="título da tarefa" 
+      maxlength="60" 
+      formControlName = 'title'>
+    <button>Salvar</button>
+  </fieldset>
+</form>
