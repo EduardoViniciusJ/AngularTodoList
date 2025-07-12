@@ -25,5 +25,20 @@ export class App {
     this.titleMain = 'Mudando o Título';
   }
 
+  remove(todo: Todo){
+    const index = this.todos.indexOf(todo);
+    if(index !== -1){
+      this.todos.splice(index, 1);
+    }
+  }
+
+  markAsDone(){
+
+  }
+
+  markAsUndone(){
+
+  }
+
   protected readonly title = signal('project-todo');
 }
