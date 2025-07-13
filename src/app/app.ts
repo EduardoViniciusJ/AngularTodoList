@@ -25,9 +25,7 @@ export class App {
       Validators.required
     ]]
   });
-    this.todos.push(new Todo(1, 'Caminhar', false));
-    this.todos.push(new Todo(2, 'Estudar', false));
-    this.todos.push(new Todo(3, 'Treinar', true));
+  this.load();
   }
 
   alterarTexto(){
@@ -66,6 +64,10 @@ export class App {
     localStorage.setItem('todos', data);
   }
 
+  load(){
+    const data = localStorage.getItem('todos');
+    this.todos = data ? JSON.parse(data) : [];
+  }
 
 
 
