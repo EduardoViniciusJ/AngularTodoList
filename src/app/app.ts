@@ -37,14 +37,18 @@ export class App {
     if(index !== -1){
       this.todos.splice(index, 1);
     }
+    this.save();
   }
 
   markAsDone(todo: Todo){
     todo.done = true;
+    this.save();
+
   }
 
   markAsUndone(todo: Todo){
     todo.done = false;
+    this.save();
   }
 
   add(){
