@@ -49,5 +49,13 @@ export class App {
     todo.done = false;
   }
 
+  add(){
+    const title = this.form.controls['title'].value;
+    const id = this.todos.length + 1;
+    this.todos.push(new Todo(id, title, false));
+  }
+
+
+
   protected readonly title = signal('project-todo');
 }

@@ -1,20 +1,20 @@
 <h1>{{titleMain}}</h1>
 <button (click)="alterarTexto()">Alterar</button>
 <ul>
-  <li *ngFor="let todo of todos">{{ todo.id }}. {{todo.title}} - {{todo.done}} 
+  <li *ngFor="let todo of todos">{{ todo.id }}. {{todo.title}} - {{todo.done}}
     <button *ngIf="!todo.done" (click)="markAsDone(todo)">CONCLUIR</button> -
-    <button *ngIf="todo.done" (click)="markAsUndone(todo)">REFAZER</button> 
-    <button (click)="remove(todo)">REMOVER</button> </li> 
+    <button *ngIf="todo.done" (click)="markAsUndone(todo)">REFAZER</button>
+    <button (click)="remove(todo)">REMOVER</button>
+  </li>
 </ul>
 
 <form [formGroup]="form">
   <fieldset>
     <label>Tarefa</label>
-    <input 
-      type="text" 
-      placeholder="título da tarefa" 
-      maxlength="60" 
-      formControlName = 'title'>
-    <button>Salvar</button>
+    <input type="text" placeholder="título da tarefa" maxlength="60" formControlName='title'>
+    <small *ngIf="form.controls['title'].invalid && !form.controls['title'].pristine">
+      Este campo deve conter entre 3 e 60 caracteres
+    </small>
+    <button [disabled]="form.invalid" (click)="add()">Salvar</button>
   </fieldset>
 </form>
