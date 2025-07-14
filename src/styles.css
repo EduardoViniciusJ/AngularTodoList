@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: -webkit-linear-gradient(60deg, #b1b2bd 0%, #c4b08c 100%);
+    text-align:center;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    text-align: left;
+    margin: 7px;
+    padding: 30px;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 3px 4px 30px 2px rgba(0, 0, 0, 0.39);
+}
+
+li{
+    padding: 2px;
+    margin: 10px;
+    font-size: 2em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0,0,0, 0.5);
+}
+
+li>button{
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+li>button:hover{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.title{
+    color: #fff;
+    font-size: 5em;
+    text-shadow: 3px 5px #000;
+}
+
+.button{
+    background-color: #000;
+    border: none;
+    margin-left: 50px;
+    padding: 15px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 0.5em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#modal {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+#modal fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modal label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#modal input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#modal input:focus {
+  outline: none;
+  border-color: #c4b08c;
+  box-shadow: 0 0 0 3px rgba(196, 176, 140, 0.3);
+}
+
+#modal small {
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: #e74c3c;
+  font-size: 0.9em;
+}
+
+#modal .button {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#modal .button:hover {
+  background-color: #c4b08c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#modal .button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
